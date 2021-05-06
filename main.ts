@@ -120,6 +120,26 @@ scene.setBackgroundImage(img`
     4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
     4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
     `)
+let tumbleweed = sprites.create(img`
+    . e . . e e e e . . . . . . . . 
+    . e e e . . . e e e . . . . . . 
+    e . e . . . . . . . e e . . . . 
+    . e . . e e e e e e e . e e . . 
+    . e . e e . . . . . . e e e . . 
+    . e e e e . . . . . . . e e e . 
+    . e e e . . . . . . . . . e e . 
+    . e e e . . . . . . . . . . e . 
+    . e . e e . . . . . . . . . e . 
+    . e . e e e . . . . . . . e e . 
+    . e . e e . e . . . . . e . e . 
+    . e . . e e e e e e e e e . e . 
+    . . e . . e e . . . . . . e . . 
+    . . e . . . e e . . . . e e . . 
+    . . . e e e e e e e e e e . . . 
+    . . . . . e e e e e . . . . . . 
+    `, SpriteKind.Player)
+tumbleweed.setPosition(20, 20)
+tumbleweed.setVelocity(10, 0)
 let red = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . 2 2 2 2 2 2 2 2 . . . . 
@@ -193,3 +213,85 @@ blue.setVelocity(-100, 0)
 pause(2000)
 red.say("sigh", 1500)
 red.setVelocity(50, 0)
+forever(function () {
+    tumbleweed = sprites.create(img`
+        . e . . e e e e . . . . . . . . 
+        . e e e . . . e e e . . . . . . 
+        e . e . . . . . . . e e . . . . 
+        . e . . e e e e e e e . e e . . 
+        . e . e e . . . . . . e e e . . 
+        . e e e e . . . . . . . e e e . 
+        . e e e . . . . . . . . . e e . 
+        . e e e . . . . . . . . . . e . 
+        . e . e e . . . . . . . . . e . 
+        . e . e e e . . . . . . . e e . 
+        . e . e e . e . . . . . e . e . 
+        . e . . e e e e e e e e e . e . 
+        . . e . . e e . . . . . . e . . 
+        . . e . . . e e . . . . e e . . 
+        . . . e e e e e e e e e e . . . 
+        . . . . . e e e e e . . . . . . 
+        `, SpriteKind.Player)
+    pause(500)
+    tumbleweed.destroy()
+    tumbleweed = sprites.create(img`
+        . . . . . . . . . . . . . e . . 
+        . . . . e e e e e e e e e . e e 
+        . . e e . . . . e e e . . e e . 
+        . e . . . e e e e e e e . . e . 
+        . e . . e e e e . . e e e . . e 
+        e e . e e . e . . . . . e . . e 
+        e e e e e e . . . . . . e . . e 
+        e e e . e . . . . . . . e . e e 
+        e e . . e . . . . . . . e . e . 
+        e e . . e . . . . . . . e . e . 
+        . e . . e . . . . . . . e e . . 
+        . e . . e . . . . . . e . e . . 
+        . e e . e e . . . . e e e . . . 
+        . . e e . . e . . e e e e . . . 
+        . . . . e e e e e e e . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Player)
+    pause(500)
+    tumbleweed.destroy()
+    tumbleweed = sprites.create(img`
+        . . . . . . e e e e e . . . . . 
+        . . . e e e e e e e e e e . . . 
+        . . e e . . . . e e . . . e . . 
+        . . e . . . . . . e e . . e . . 
+        . e . e e e e e e e e e . . e . 
+        . e . e . . . . . e . e e . e . 
+        . e e . . . . . . . e e e . e . 
+        . e . . . . . . . . . e e . e . 
+        . e . . . . . . . . . . e e e . 
+        . e e . . . . . . . . . e e e . 
+        . e e e . . . . . . . e e e e . 
+        . . e e e . . . . . . e e . e . 
+        . . e e . e e e e e e e . . e . 
+        . . . . e e . . . . . . . e . e 
+        . . . . . . e e e . . . e e e . 
+        . . . . . . . . e e e e . . e . 
+        `, SpriteKind.Player)
+    pause(500)
+    tumbleweed.destroy()
+    tumbleweed = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . e e e e e e e . . . . 
+        . . . e e e e . . e . . e e . . 
+        . . . e e e . . . . e e . e e . 
+        . . e . e . . . . . . e . . e . 
+        . . e e . . . . . . . e . . e . 
+        . e . e . . . . . . . e . . e e 
+        . e . e . . . . . . . e . . e e 
+        e e . e . . . . . . . e . e e e 
+        e . . e . . . . . . e e e e e e 
+        e . . e . . . . . e . e e . e e 
+        e . . e e e . . e e e e . . e . 
+        . e . . e e e e e e e . . . e . 
+        . e e . . e e e . . . . e e . . 
+        e e . e e e e e e e e e . . . . 
+        . . e . . . . . . . . . . . . . 
+        `, SpriteKind.Player)
+    pause(500)
+    tumbleweed.destroy()
+})
