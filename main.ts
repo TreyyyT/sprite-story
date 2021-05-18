@@ -397,8 +397,8 @@ blue.setImage(img`
     `)
 blue.y = 70
 blue.setVelocity(50, 0)
-blue.say("B)", 10000)
-for (let index = 0; index < 1000; index++) {
+blue.say("B^)", 10000)
+for (let index = 0; index < 200; index++) {
     projectile = sprites.createProjectileFromSprite(img`
         . . . . . 3 3 b 3 3 d d 3 3 . . 
         . . . . 3 1 1 d 3 d 1 1 1 1 3 . 
@@ -416,5 +416,6 @@ for (let index = 0; index < 1000; index++) {
         4 5 5 5 d d d d 4 4 b 3 . . . . 
         . 4 5 5 5 4 4 4 . . . . . . . . 
         . . 4 4 4 . . . . . . . . . . . 
-        `, blue, -53, 0)
+        `, blue, randint(-50, 50), randint(-50, 50))
+    pause(500)
 }
